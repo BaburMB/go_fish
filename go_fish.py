@@ -18,42 +18,42 @@ def all_cards():
 
 # print all_cards()
 
-def ask_card():
-    print "(i) Which card you want to ask?"
-    ask = raw_input("(i) You have %s >>" % player_cards)
-    result = check_ask(ask)
-    if result == True:
-        print result
-        print ask
-    else:
-        print result
-        ask_card()
-#end of ask_card()
-
-
-def check_ask(ask):
-    ask_accepted = False
-    for a in range(0, len(Card_start.player_cards)):
-        if ask == Card_start.player_cards[a]:
-            ask_accepted = True
-            return ask_accepted
-        else:
-            a+=1
-    return ask_accepted
-#end of check_ask()
+# def ask_card():
+#     print "(i) Which card you want to ask?"
+#     ask = raw_input("(i) You have %s >>" % Card_start.player_cards)
+#     result = check_ask(ask)
+#     if result == True:
+#         print result
+#         print ask
+#     else:
+#         print result
+#         ask_card()
+# #end of ask_card()
+#
+#
+# def check_ask(ask):
+#     ask_accepted = False
+#     for a in range(0, len(Card_start.player_cards)):
+#         if ask == Card_start.player_cards[a]:
+#             ask_accepted = True
+#             return ask_accepted
+#         else:
+#             a+=1
+#     return ask_accepted
+# #end of check_ask()
 
 class Player():
-    all_cards()
+    s=5
 
 # class Bot():
 #     a=3
 
 
-#
-#CARD_START CLASS BEGINS HERE
-#
+# CARD_START CLASS BEGINS HERE
+
 class Card_start():
     temp_cards = all_cards()
+    print all_cards()
     random.shuffle(temp_cards)
 
     player_cards = temp_cards[0:7]
@@ -68,4 +68,7 @@ class Card_start():
         a += 1
 
     print "Player has got ", player_cards
+    print "Bot has got", bot_cards
+    print "All cards on the table", temp_cards
 #class Card_start ends here
+# ask_card()
